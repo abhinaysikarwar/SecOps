@@ -1,4 +1,4 @@
-name: Step 2 - Receive Application Trigger 1
+name: Step 2 - Receive Application Trigger 
 on:
   repository_dispatch:
     types:
@@ -40,4 +40,12 @@ jobs:
                 --no-git \
                 --no-banner \
                 --exit-code 1
+
+
+          - name: step 4A - List Scanned Files
+            run:
+              echo "Files Inside Gitleaks scanning Scope :"
+              echo "==============================="
+              find application -type f -print 
+
               
