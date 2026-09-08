@@ -1,4 +1,4 @@
-name: Step 2 - Receive Application Trigger
+name: Step 2 - Receive Application Trigger 1
 on:
   repository_dispatch:
     types:
