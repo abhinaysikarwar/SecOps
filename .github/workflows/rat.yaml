@@ -128,12 +128,11 @@ jobs:
           name: trivy-dependency-report
           path: application/trivy-report.json
 
-
   # Stage 3 : Docker Image Build + Image Scanning
   build-and-scan-image:
     name: Build & Scan Docker Image
     runs-on: ubuntu-latest
-    needs: trivy-deps
+    needs: trivy
 
     steps:
       - name: Display Received Application Information
